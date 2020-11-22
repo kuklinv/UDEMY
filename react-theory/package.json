@@ -1,6 +1,7 @@
 {
   "name": "react-theory",
   "version": "0.1.0",
+  "description": "its intro in React course on UDEMY/ 1-st part",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
