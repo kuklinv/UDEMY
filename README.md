@@ -1,6 +1,8 @@
 # UDEMY React course
-https://img.shields.io/github/issues/kuklinv/UDEMY?logo=UDEMY
-https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github
+
+[![](https://img.shields.io/github/issues/kuklinv/UDEMY?logo=UDEMY)](http://shields.io/)
+
+![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)
 
 #### 22.11.2020
 * start course
