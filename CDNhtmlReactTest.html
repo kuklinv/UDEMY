@@ -6,16 +6,50 @@
     <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .car {
+            display: inline-block;
+            border: 2px solid #ccc;
+            box-shadow: 2px 1px 1px #eee;
+            padding: 10px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
 
 <div id="root"></div>
+<!--<div class="car">-->
+<!--    <h3>Audi Q3</h3>-->
+<!--    <p>Year:<strong>2020</strong></p>-->
+<!--</div>-->
 
 <script type="text/babel">
+    function Car(props) {
+        return (
+                <div className="car">
+                    <h3>{props.name}</h3>
+                    <p>Year:<strong>{props.year}</strong></p>
+                </div>
+        );
+    }
+
+    const App = (
+            <div>
+                <Car name="Audi Q3" year="2020"/>
+                <Car name="Audi Q5" year="2021"/>
+                <Car name="Audi Q8" year="2022"/>
+            </div>
+    )
+
     ReactDOM.render(
-            <h1>Hello React from UDEMY</h1>,
-            document.getElementById("root")
-    );
+            App,
+            document.querySelector('#root')
+    )
+    // ReactDOM.render(
+    //         <h1>Hello React from UDEMY</h1>,
+    //         document.getElementById("root")
+    // );
 </script>
 </body>
 </html>
