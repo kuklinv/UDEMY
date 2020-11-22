@@ -4,6 +4,8 @@
 
 ![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)
 
+![](https://img.shields.io/github/commit-activity/w/kuklinv/UDEMY?logo=github)
+
 #### 22.11.2020
 * start course
 * create learning repo on github -> udemyReactCourse
