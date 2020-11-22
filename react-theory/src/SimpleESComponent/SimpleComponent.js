@@ -1,13 +1,19 @@
 import React from "react";
 
-// class SimpleComponent extends Component {
-//     render() {
-//         return (
-
-//         )
-//     }
-// }
-
-const SimpleComponent = () => <div>Its SimpleComponent</div>;
+const SimpleComponent = () => (
+  <div>
+    Its SimpleComponent
+    <strong> test</strong>
+  </div>
+);
 
 export default SimpleComponent;
+
+// More less:
+
+// export default () => (
+//   <div>
+//     Its SimpleComponent
+//     <strong> test</strong>
+//   </div>
+// );
