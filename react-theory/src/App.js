@@ -20,17 +20,20 @@ class App extends Component {
 
     const pics = this.state.pics;
 
+    // const mappingPics = (stateArr) => stateArr.map((element) => (`<Picture name={${element.name}} id_pic={${element.id_pic}} />`),
+
     return (
       <div style={rootDivStyle}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 style={{ color: "yellow" }}>{this.state.pageTitle}</h1>
           <p style={{ color: "gray" }}>start at 11/22/2020</p>
-          <span></span>
+          {/* <span>{mappingPics(pics)}</span>
+          TODO: i wont iterate state.....
+           */}
           <Picture name={pics[0].name} id_pic={pics[0].id_pic} />
           <Picture name={pics[1].name} id_pic={pics[1].id_pic} />
           <Picture name={pics[2].name} id_pic={pics[2].id_pic} />
-          <span></span>
         </header>
       </div>
 
