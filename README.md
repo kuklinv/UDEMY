@@ -4,11 +4,15 @@
 
 ![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)
 
-![](https://img.shields.io/github/commit-activity/w/kuklinv/UDEMY?logo=github)
+![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
+
+#### 23.11.2020
+
+- go to 3-section (React base)
 
 #### 22.11.2020
-* start course
-* create learning repo on github -> udemyReactCourse
-* section 1: what is 
-* create react app with CDN and with CLI
 
+- start course
+- create learning repo on github -> udemyReactCourse
+- section 1: what is
+- create react app with CDN and with CLI
