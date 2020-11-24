@@ -5,22 +5,42 @@ import Picture from "./PictureComponent/Picture.js";
 // import SimpleComponent from "./SimpleESComponent/SimpleComponent.js";
 
 class App extends Component {
-  // ToDO: not working handler => i'll try eventListener
-  changeTitleHandler = function() {
+  // buttonClick: document.querySelector(".buttonClick");
+
+  // buttonClick.addEventListener("click", () => {
+  //   console.log("buttonClick");
+  // });
+  state = {
+    pics: [
+      { name: "first pic", id_pic: 1 },
+      { name: "second pic", id_pic: 2 },
+      { name: "third pic", id_pic: 3 },
+    ],
+    pageTitle: "Hello UDEMY React course",
+  };
+
+  changeTitleHandler = () => {
     console.log("click");
   };
+
+  changeStateTitleHandler = () => {
+    const oldTitle = this.state.pageTitle;
+    const newTitle = oldTitle + "  (changed)";
+    this.setState({ pageTitle: newTitle });
+  };
+
   render() {
     const rootDivStyle = {
       textAlign: "center",
     };
-    this.state = {
-      pics: [
-        { name: "first pic", id_pic: 1 },
-        { name: "second pic", id_pic: 2 },
-        { name: "third pic", id_pic: 3 },
-      ],
-      pageTitle: "Hello UDEMY React course",
-    };
+    // this.state = {
+    //   pics: [
+    //     { name: "first pic", id_pic: 1 },
+    //     { name: "second pic", id_pic: 2 },
+    //     { name: "third pic", id_pic: 3 },
+    //   ],
+    //   pageTitle: "Hello UDEMY React course",
+    // };
 
     const pics = this.state.pics;
 
@@ -41,6 +61,13 @@ class App extends Component {
 
           <button className="buttonClick" onClick={this.changeTitleHandler}>
             Change title
+          </button>
+
+          <button
+            className="buttonSetState"
+            onClick={this.changeStateTitleHandler}
+          >
+            Change state
           </button>
 
           {/* <button className="buttonClick">Change title</button> */}
