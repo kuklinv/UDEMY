@@ -6,7 +6,7 @@
 
 ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
-#### 23.11.2020
+#### 23 - 24.11.2020
 
 - go to 3-section (React base)
 

@@ -5,6 +5,10 @@ import Picture from "./PictureComponent/Picture.js";
 // import SimpleComponent from "./SimpleESComponent/SimpleComponent.js";
 
 class App extends Component {
+  // ToDO: not working handler => i'll try eventListener
+  changeTitleHandler = function() {
+    console.log("click");
+  };
   render() {
     const rootDivStyle = {
       textAlign: "center",
@@ -20,9 +24,10 @@ class App extends Component {
 
     const pics = this.state.pics;
 
-    const changeTitleHandler = function() {
-      console.log("click");
-    };
+    // ToDO: not working handler => i'll try eventListener
+    // function changeTitleHandler() {
+    //   console.log("click");
+    // }
 
     // try to iterate for state array
     // const mappingPics = (stateArr) => stateArr.map((element) => (`<Picture name={${element.name}} id_pic={${element.id_pic}} />`),
@@ -34,7 +39,11 @@ class App extends Component {
           <h1 style={{ color: "yellow" }}>{this.state.pageTitle}</h1>
           <p style={{ color: "gray" }}>start at 11/22/2020</p>
 
-          <button onClick={this.changeTitleHandler}>Change title</button>
+          <button className="buttonClick" onClick={this.changeTitleHandler}>
+            Change title
+          </button>
+
+          {/* <button className="buttonClick">Change title</button> */}
 
           <div>
             <span style={{}}></span>
@@ -86,5 +95,10 @@ class App extends Component {
     );
   }
 }
+
+// const buttonClick = document.querySelector(".buttonClick");
+// buttonClick?.addEventListener("click", () => {
+//   console.log("buttonClick");
+// });
 
 export default App;
