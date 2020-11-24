@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import React, { Component } from "react";
 import "./App.css";
 import Picture from "./PictureComponent/Picture.js";
-import SimpleComponent from "./SimpleESComponent/SimpleComponent.js";
+// import SimpleComponent from "./SimpleESComponent/SimpleComponent.js";
 
 class App extends Component {
   render() {
@@ -20,6 +20,11 @@ class App extends Component {
 
     const pics = this.state.pics;
 
+    const changeTitleHandler = function() {
+      console.log("click");
+    };
+
+    // try to iterate for state array
     // const mappingPics = (stateArr) => stateArr.map((element) => (`<Picture name={${element.name}} id_pic={${element.id_pic}} />`),
 
     return (
@@ -28,6 +33,13 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 style={{ color: "yellow" }}>{this.state.pageTitle}</h1>
           <p style={{ color: "gray" }}>start at 11/22/2020</p>
+
+          <button onClick={this.changeTitleHandler}>Change title</button>
+
+          <div>
+            <span style={{}}></span>
+          </div>
+
           {/* <span>{mappingPics(pics)}</span>
           TODO: i wont iterate state.....
            */}
