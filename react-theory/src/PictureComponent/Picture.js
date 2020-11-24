@@ -9,6 +9,7 @@ class Picture extends Component {
         <h4>name: {this.props.name}</h4>
         <p>id: {this.props.id_pic}</p>
         {this.props.children}
+        <button onClick={this.props.changeTitleButton}>click</button>
       </div>
     );
   }

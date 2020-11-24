@@ -23,9 +23,9 @@ class App extends Component {
     console.log("click");
   };
 
-  changeStateTitleHandler = () => {
-    const oldTitle = this.state.pageTitle;
-    const newTitle = oldTitle + "  (changed)";
+  changeStateTitleHandler = (newTitle) => {
+    // const oldTitle = this.state.pageTitle;
+    // const newTitle = oldTitle + "  (changed)";
     this.setState({ pageTitle: newTitle });
   };
 
@@ -65,7 +65,7 @@ class App extends Component {
 
           <button
             className="buttonSetState"
-            onClick={this.changeStateTitleHandler}
+            onClick={this.changeStateTitleHandler.bind(this, "Change state")}
           >
             Change state
           </button>
@@ -79,9 +79,31 @@ class App extends Component {
           {/* <span>{mappingPics(pics)}</span>
           TODO: i wont iterate state.....
            */}
-          <Picture name={pics[0].name} id_pic={pics[0].id_pic} />
-          <Picture name={pics[1].name} id_pic={pics[1].id_pic} />
-          <Picture name={pics[2].name} id_pic={pics[2].id_pic} />
+          <div className="border">
+            <Picture
+              name={pics[0].name}
+              id_pic={pics[0].id_pic}
+              changeTitleButton={this.changeStateTitleHandler.bind(
+                // its best practice for browser - not re-render page
+                this,
+                pics[0].name
+              )}
+            />
+            <Picture
+              name={pics[1].name}
+              id_pic={pics[1].id_pic}
+              changeTitleButton={() =>
+                this.changeStateTitleHandler(pics[1].name)
+              }
+            />
+            <Picture
+              name={pics[2].name}
+              id_pic={pics[2].id_pic}
+              changeTitleButton={() =>
+                this.changeStateTitleHandler(pics[2].name)
+              }
+            />
+          </div>
         </header>
       </div>
 
