@@ -18,6 +18,7 @@ class App extends Component {
       { name: "third pic", id_pic: 3 },
     ],
     pageTitle: "Hello UDEMY React course",
+    showPicture: false,
   };
 
   changeTitleHandler = () => {
@@ -36,10 +37,34 @@ class App extends Component {
     this.setState({ pageTitle: event.target.value });
   };
 
+  changeStateShowPicsHandler = () => {
+    this.setState({
+      showPicture: !this.state.showPicture,
+    });
+  };
+
   render() {
     const rootDivStyle = {
       textAlign: "center",
     };
+
+    let pictureList = null;
+    if (this.state.showPicture) {
+      pictureList = this.state.pics.map((pic, index) => {
+        return (
+          <Picture
+            key={index}
+            name={pic.name}
+            id_pic={pic.id_pic}
+            changeTitleButton={this.changeStateTitleHandler.bind(
+              this,
+              pic.name
+            )}
+          />
+        );
+      });
+    }
+
     // this.state = {
     //   pics: [
     //     { name: "first pic", id_pic: 1 },
@@ -79,6 +104,13 @@ class App extends Component {
             Change state
           </button>
 
+          <button
+            className="buttonTogglePics"
+            onClick={this.changeStateShowPicsHandler}
+          >
+            Toggle pics
+          </button>
+
           {/* <button className="buttonClick">Change title</button> */}
 
           <div>
@@ -89,19 +121,7 @@ class App extends Component {
           TODO: i wont iterate state.....
            */}
           <div className="border">
-            {this.state.pics.map((pic, index) => {
-              return (
-                <Picture
-                  key={index}
-                  name={pic.name}
-                  id_pic={pic.id_pic}
-                  changeTitleButton={this.changeStateTitleHandler.bind(
-                    this,
-                    pic.name
-                  )}
-                />
-              );
-            })}
+            {pictureList}
             {/* use different ways for put hendlers on event on button click */}
             {/* <Picture
               name={pics[0].name}
@@ -125,7 +145,6 @@ class App extends Component {
               changeTitleButton={() =>
                 this.changeStateTitleHandler(pics[2].name)
               } */}
-            />
           </div>
         </header>
       </div>
