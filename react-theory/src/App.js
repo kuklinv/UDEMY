@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import React, { Component } from "react";
 import "./App.css";
 import Picture from "./PictureComponent/Picture.js";
+import _ from "lodash";
 // import SimpleComponent from "./SimpleESComponent/SimpleComponent.js";
 
 class App extends Component {
@@ -27,6 +28,12 @@ class App extends Component {
     // const oldTitle = this.state.pageTitle;
     // const newTitle = oldTitle + "  (changed)";
     this.setState({ pageTitle: newTitle });
+  };
+
+  changeInputHandler = (event) => {
+    // _.debounce(this.setState({ pageTitle: event.target.value }), 300);
+    //TODO: don't working debounce
+    this.setState({ pageTitle: event.target.value });
   };
 
   render() {
@@ -58,6 +65,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 style={{ color: "yellow" }}>{this.state.pageTitle}</h1>
           <p style={{ color: "gray" }}>start at 11/22/2020</p>
+
+          <input type="text" onChange={this.changeInputHandler}></input>
 
           <button className="buttonClick" onClick={this.changeTitleHandler}>
             Change title
