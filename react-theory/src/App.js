@@ -49,7 +49,7 @@ class App extends Component {
     //   pageTitle: "Hello UDEMY React course",
     // };
 
-    const pics = this.state.pics;
+    // const pics = this.state.pics;
 
     // ToDO: not working handler => i'll try eventListener
     // function changeTitleHandler() {
@@ -89,7 +89,21 @@ class App extends Component {
           TODO: i wont iterate state.....
            */}
           <div className="border">
-            <Picture
+            {this.state.pics.map((pic, index) => {
+              return (
+                <Picture
+                  key={index}
+                  name={pic.name}
+                  id_pic={pic.id_pic}
+                  changeTitleButton={this.changeStateTitleHandler.bind(
+                    this,
+                    pic.name
+                  )}
+                />
+              );
+            })}
+            {/* use different ways for put hendlers on event on button click */}
+            {/* <Picture
               name={pics[0].name}
               id_pic={pics[0].id_pic}
               changeTitleButton={this.changeStateTitleHandler.bind(
@@ -110,7 +124,7 @@ class App extends Component {
               id_pic={pics[2].id_pic}
               changeTitleButton={() =>
                 this.changeStateTitleHandler(pics[2].name)
-              }
+              } */}
             />
           </div>
         </header>
