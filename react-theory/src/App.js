@@ -45,14 +45,13 @@ class App extends Component {
 
   changeNameInput = (name, index) => {
     const thisPicture = this.state.pics[index];
+    thisPicture.name = name;
     // console.log(thisPicture.name);
-    const [picsClone] = [...this.state.pics]; // Important!! its clone of state! without this cant set new state
+    const picsClone = [...this.state.pics]; // Important!! its clone of state! without this cant set new state
     picsClone[index] = thisPicture;
-    console.log(picsClone);
-    //TODO: error! not sure what
-    // this.setState({
-    //   pics: picsClone,
-    // });
+    this.setState({
+      pics: picsClone,
+    });
     // picsClone[index] = thisPicture;
   };
 
