@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "radium": "^0.26.1"
   }
 }

@@ -17,7 +17,8 @@
 #### 25-29.11.2020
 
 - vol.3 about work with component state => done successfully
-- go to 4-th section: Components style => css, sass, dynamic classes, radium
+- go to 4-th section: Components style => dynamic classes, radium - inline style in JS
+- create new project: "react-use-sass" for sass and scss exercises
 
 #### 23 - 24.11.2020
 
@@ -28,4 +29,4 @@
 - start course
 - create learning repo on github -> udemyReactCourse
 - section 1: what is
-- create react app with CDN and with CLI
+- create react app with CDN and with CLI: react-theory

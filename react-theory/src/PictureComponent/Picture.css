@@ -1,7 +1,7 @@
 .pic {
   display: block;
-  border: 2px solid #ccc;
-  box-shadow: 2px 1px 1px #eee;
+  /* border: 2px solid #ccc;
+  box-shadow: 2px 1px 1px #eee; */
   padding: 10px;
   margin-right: 10px;
 }
@@ -9,4 +9,30 @@
 h4,
 p {
   font-size: 14px;
+}
+
+.basePic {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.input {
+}
+
+.input:focus,
+.input.active {
+  outline: none;
+}
+
+.input.green {
+  border: 1px solid green;
+}
+
+.input.red {
+  border: 1px solid red;
+}
+
+.input.bold {
+  border: 2px solid green;
+  font-weight: bold;
 }
