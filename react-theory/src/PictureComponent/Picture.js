@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Picture.css";
+import Radium from "radium";
 
 class Picture extends Component {
   // super({props})
@@ -16,8 +17,19 @@ class Picture extends Component {
       inputClasses.push("bold");
     }
 
+    // its need to use Radium - change components style with action at component
+    const inlineStyleEx = {
+      border: "1px solid #ccc",
+      boxShadow: "0 4px 5 px 0 rgba(0, 0, 0, 0.14)",
+      ":hover": {
+        border: "1px solid #aaa",
+        boxShadow: "0 4px 15 px 0 rgba(0, 0, 0, 0.25)",
+        cursor: "pointer",
+      },
+    };
+
     return (
-      <div className="basePic">
+      <div className="basePic" style={inlineStyleEx}>
         <div className="pic">
           <h4>name: {this.props.name}</h4>
           <p>id: {this.props.id_pic}</p>
@@ -36,4 +48,5 @@ class Picture extends Component {
   }
 }
 
-export default Picture;
+// using Radium
+export default Radium(Picture);

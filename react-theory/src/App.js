@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import React, { Component } from "react";
 import "./App.css";
 import Picture from "./PictureComponent/Picture.js";
-import _ from "lodash";
+// import _ from "lodash";
 // import SimpleComponent from "./SimpleESComponent/SimpleComponent.js";
 
 class App extends Component {
