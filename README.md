@@ -13,9 +13,9 @@
 
 ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
-#### 23.11.2020
+#### 23 - 24.11.2020
 
-- go to 3-section (React base)
+- go to 3-section (React base): nested Components, state, data transfer, functions params transfer
 
 #### 22.11.2020
 
