@@ -52,8 +52,15 @@ class App extends Component {
     this.setState({
       pics: picsClone,
     });
-    // picsClone[index] = thisPicture;
   };
+  // use pure function because using 'bind' with invoke
+  handleDelete(index) {
+    const picsClone = this.state.pics.concat(); // here using concat without arguments for cloning state
+    picsClone.splice(index, 1);
+    this.setState({
+      pics: picsClone,
+    });
+  }
 
   render() {
     const rootDivStyle = {
@@ -68,6 +75,7 @@ class App extends Component {
             key={index}
             name={pic.name}
             id_pic={pic.id_pic}
+            onDelete={this.handleDelete.bind(this, index)}
             changeTitleButton={this.changeStateTitleHandler.bind(
               this,
               pic.name

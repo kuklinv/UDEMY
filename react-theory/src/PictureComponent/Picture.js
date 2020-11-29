@@ -21,6 +21,7 @@ class Picture extends Component {
             value={this.props.name}
           />
           {/* <button onClick={this.props.changeTitleButton}>click</button> */}
+          <button onClick={this.props.onDelete}>delete</button>
         </div>
       </div>
     );
