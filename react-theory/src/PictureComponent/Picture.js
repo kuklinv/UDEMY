@@ -26,6 +26,8 @@ class Picture extends Component {
         boxShadow: "0 4px 15 px 0 rgba(0, 0, 0, 0.25)",
         cursor: "pointer",
       },
+      display: "inline-block",
+      margin: "1em",
     };
 
     return (
