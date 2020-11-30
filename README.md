@@ -14,6 +14,10 @@
 
 ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
+#### 30.11.2020
+
+- go to part 5: React Components: props, state, lifecycle, stateful, ets about Components
+
 #### 25-29.11.2020
 
 - vol.3 about work with component state => done successfully
