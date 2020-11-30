@@ -16,7 +16,10 @@
 
 #### 30.11.2020
 
-- go to part 5: React Components: props, state, lifecycle, stateful, ets about Components
+- go to part 5: React Components: props, state, lifecycle methods, stateful component, ets about Components
+  > - shouldComponentUpdate(nextProps, nextState){...} for optimization
+  > - static getDerivedStateFromProps(nextProps, nextState){...} for mod state past render but before mount in DOM
+  > - getSnapshotBeforeUpdate() {...} for example for remembering cursor position before render and for rerender later
 
 #### 25-29.11.2020
 

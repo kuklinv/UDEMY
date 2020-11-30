@@ -4,10 +4,25 @@ import Radium from "radium";
 
 class Picture extends Component {
   // super({props})
+
+  // react life cycle component
   shouldComponentUpdate(nextProps, nextState) {
     // optimization app  - test  - need change and re-render component or not
     return this.nextProps.name.trim() !== this.props.name.trim();
   }
+
+  // in Rect 16.3+ new life cycle methods
+
+  static getDerivedStateFromProps(nextProps, nextState) {
+    return prevState; // if don't change state, ore return result object - new state, witch will be merged with origin state
+  }
+
+  getSnapshotBeforeUpdate() {
+    console.log(
+      "for example for remembering cursor position before render and for rerender later"
+    );
+  }
+
   render(props) {
     const inputClasses = ["input"];
 
