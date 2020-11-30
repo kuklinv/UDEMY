@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import React, { Component } from "react";
 import "./App.css";
 import Picture from "./PictureComponent/Picture.js";
+import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 // import _ from "lodash"; // TODO: for some reason debounce for input
 // import SimpleComponent from "./SimpleESComponent/SimpleComponent.js"; // for using {child}
 
@@ -66,19 +67,21 @@ class App extends Component {
     if (this.state.showPicture) {
       pictureList = this.state.pics.map((pic, index) => {
         return (
-          <Picture
-            key={index}
-            name={pic.name}
-            id_pic={pic.id_pic}
-            onDelete={this.handleDelete.bind(this, index)}
-            changeTitleButton={this.changeStateTitleHandler.bind(
-              this,
-              pic.name
-            )}
-            onChangeName={(event) =>
-              this.changeNameInput(event.target.value, index)
-            }
-          />
+          <ErrorBoundary key={index}>
+            <Picture
+              // key={index} when there is another root component (now ErrorBoundary) - the "key" go there
+              name={pic.name}
+              id_pic={pic.id_pic}
+              onDelete={this.handleDelete.bind(this, index)}
+              changeTitleButton={this.changeStateTitleHandler.bind(
+                this,
+                pic.name
+              )}
+              onChangeName={(event) =>
+                this.changeNameInput(event.target.value, index)
+              }
+            />
+          </ErrorBoundary>
         );
       });
     }

@@ -11,10 +11,10 @@ class Picture extends Component {
     return this.nextProps.name.trim() !== this.props.name.trim();
   }
 
-  // in Rect 16.3+ new life cycle methods
+  // in Rect 16.3+ new life cycle methods (2)
 
   static getDerivedStateFromProps(nextProps, nextState) {
-    return prevState; // if don't change state, ore return result object - new state, witch will be merged with origin state
+    return {}; // if don't change state, ore return result object - new state, witch will be merged with origin state
   }
 
   getSnapshotBeforeUpdate() {
