@@ -2,32 +2,28 @@ import logo from "./logo.svg";
 import React, { Component } from "react";
 import "./App.css";
 import Picture from "./PictureComponent/Picture.js";
-// import _ from "lodash";
-// import SimpleComponent from "./SimpleESComponent/SimpleComponent.js";
+// import _ from "lodash"; // TODO: for some reason debounce for input
+// import SimpleComponent from "./SimpleESComponent/SimpleComponent.js"; // for using {child}
 
 class App extends Component {
-  // buttonClick: document.querySelector(".buttonClick");
-
-  // buttonClick.addEventListener("click", () => {
-  //   console.log("buttonClick");
-  // });
-  state = {
-    pics: [
-      { name: "first pic", id_pic: 1 },
-      { name: "second pic", id_pic: 2 },
-      { name: "third pic", id_pic: 3 },
-    ],
-    pageTitle: "Hello UDEMY React course",
-    showPicture: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      pics: [
+        { name: "first pic", id_pic: 1 },
+        { name: "second pic", id_pic: 2 },
+        { name: "third pic", id_pic: 3 },
+      ],
+      pageTitle: "Hello UDEMY React course",
+      showPicture: false,
+    };
+  }
 
   changeTitleHandler = () => {
     console.log("click");
   };
 
   changeStateTitleHandler = (newTitle) => {
-    // const oldTitle = this.state.pageTitle;
-    // const newTitle = oldTitle + "  (changed)";
     this.setState({ pageTitle: newTitle });
   };
 
@@ -46,7 +42,6 @@ class App extends Component {
   changeNameInput = (name, index) => {
     const thisPicture = this.state.pics[index];
     thisPicture.name = name;
-    // console.log(thisPicture.name);
     const picsClone = [...this.state.pics]; // Important!! its clone of state! without this cant set new state
     picsClone[index] = thisPicture;
     this.setState({
@@ -88,30 +83,14 @@ class App extends Component {
       });
     }
 
-    // this.state = {
-    //   pics: [
-    //     { name: "first pic", id_pic: 1 },
-    //     { name: "second pic", id_pic: 2 },
-    //     { name: "third pic", id_pic: 3 },
-    //   ],
-    //   pageTitle: "Hello UDEMY React course",
-    // };
-
-    // const pics = this.state.pics;
-
     // ToDO: not working handler => i'll try eventListener
-    // function changeTitleHandler() {
-    //   console.log("click");
-    // }
-
-    // try to iterate for state array
-    // const mappingPics = (stateArr) => stateArr.map((element) => (`<Picture name={${element.name}} id_pic={${element.id_pic}} />`),
 
     return (
       <div style={rootDivStyle}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 style={{ color: "yellow" }}>{this.state.pageTitle}</h1>
+          {/* <h1 style={{ color: "yellow" }}>{this.state.pageTitle}</h1> */}
+          <h1>{this.props.title}</h1>
           <p style={{ color: "gray" }}>start at 11/22/2020</p>
 
           <input type="text" onChange={this.changeInputHandler}></input>
@@ -140,9 +119,6 @@ class App extends Component {
             <span style={{}}></span>
           </div>
 
-          {/* <span>{mappingPics(pics)}</span>
-          TODO: i wont iterate state.....
-           */}
           <div className="border">
             {pictureList}
             {/* use different ways for put hendlers on event on button click */}
@@ -171,41 +147,6 @@ class App extends Component {
           </div>
         </header>
       </div>
-
-      // <div style={rootDivStyle}>
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <h1 style={{ color: "yellow" }}>{this.state.pageTitle}</h1>
-      //     <p style={{ color: "gray" }}>start at 11/22/2020</p>
-      //     <span></span>
-      //     <Picture name={pics[0].name} id_pic={pics[0].id_pic} />
-      //     <Picture name={pics[1].name} id_pic={pics[1].id_pic} />
-      //     <Picture name={pics[2].name} id_pic={pics[2].id_pic} />
-      //   </header>
-      // </div>
-
-      // <div style={rootDivStyle}>
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <h1 style={{ color: "yellow" }}>Hello UDEMY React course</h1>
-      //     <p style={{ color: "gray" }}>start at 11/22/2020</p>
-      //     <span></span>
-      //     <Picture name={"first pic"} id_pic={1} />
-      //     <Picture name={"second pic"} id_pic={2}>
-      //       <span style={{ color: "red" }}>children pic</span>
-      //     </Picture>
-      //     <span></span>
-      //     <SimpleComponent />
-      //   </header>
-      // </div>
-
-      //   <div className="App">
-      //     <header className="App-header">
-      //       <img src={logo} className="App-logo" alt="logo" />
-      //       <h1>Hello UDEMY React course</h1>
-      //       <p>start at 11/22/2020</p>
-      //     </header>
-      //   </div>
     );
   }
 }

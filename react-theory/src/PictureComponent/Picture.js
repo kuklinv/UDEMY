@@ -4,6 +4,10 @@ import Radium from "radium";
 
 class Picture extends Component {
   // super({props})
+  shouldComponentUpdate(nextProps, nextState) {
+    // optimization app  - test  - need change and re-render component or not
+    return this.nextProps.name.trim() !== this.props.name.trim();
+  }
   render(props) {
     const inputClasses = ["input"];
 
