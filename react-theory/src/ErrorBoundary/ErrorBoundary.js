@@ -1,20 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 
-export default class ErrorBoundary extends React.Component() {
-  //   constructor(props) {
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasError: false,
+    };
+  }
 
-  //     state = {
-  //       hasError: false,
-  //     };
-  //   }
+  //   state = {
+  //     hasError: false,
+  //   };
 
-  state = {
-    hasError: false,
-  };
-
-  //   componentDidCatch(error, info) {
-  //     this.setState({ hasError: true });
-  //   }
+  componentDidCatch(error, info) {
+    this.setState({ hasError: true });
+  }
 
   render() {
     if (this.state.hasError) {
@@ -23,3 +23,5 @@ export default class ErrorBoundary extends React.Component() {
     return this.props.children;
   }
 }
+
+export default ErrorBoundary;
