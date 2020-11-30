@@ -13,8 +13,8 @@ class Picture extends Component {
 
   // in Rect 16.3+ new life cycle methods (2)
 
-  static getDerivedStateFromProps(nextProps, nextState) {
-    return {}; // if don't change state, ore return result object - new state, witch will be merged with origin state
+  static getDerivedStateFromProps(nextProps, prevState) {
+    return prevState; // if don't change state, ore return result object - new state, witch will be merged with origin state
   }
 
   getSnapshotBeforeUpdate() {
@@ -25,6 +25,11 @@ class Picture extends Component {
 
   render(props) {
     const inputClasses = ["input"];
+
+    // for example ErrorBoundary hi class
+    // if (Math.random() > 0.7) {
+    //   throw new Error("Something went wrong");
+    // }
 
     if (this.props.name !== "") {
       inputClasses.push("green");
