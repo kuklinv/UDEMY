@@ -6,10 +6,10 @@ class Picture extends Component {
   // super({props})
 
   // react life cycle component
-  shouldComponentUpdate(nextProps, nextState) {
-    // optimization app  - test  - need change and re-render component or not
-    return this.nextProps.name.trim() !== this.props.name.trim();
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  // optimization app  - test  - need change and re-render component or not
+  //   return this.nextProps.name.trim() !== this.props.name.trim();
+  // }
 
   // in Rect 16.3+ new life cycle methods (2)
 

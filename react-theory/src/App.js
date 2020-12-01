@@ -5,6 +5,7 @@ import Picture from "./PictureComponent/Picture.js";
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 // import _ from "lodash"; // TODO: for some reason debounce for input
 // import SimpleComponent from "./SimpleESComponent/SimpleComponent.js"; // for using {child}
+import Counter from "./Counter/Counter.js";
 
 class App extends Component {
   constructor(props) {
@@ -12,8 +13,8 @@ class App extends Component {
     this.state = {
       pics: [
         { name: "first pic", id_pic: 1 },
-        { name: "second pic", id_pic: 2 },
-        { name: "third pic", id_pic: 3 },
+        // { name: "second pic", id_pic: 2 },
+        // { name: "third pic", id_pic: 3 },
       ],
       pageTitle: "Hello UDEMY React course",
       showPicture: false,
@@ -67,21 +68,21 @@ class App extends Component {
     if (this.state.showPicture) {
       pictureList = this.state.pics.map((pic, index) => {
         return (
-          <ErrorBoundary key={index}>
-            <Picture
-              // key={index} when there is another root component (now ErrorBoundary) - the "key" go there
-              name={pic.name}
-              id_pic={pic.id_pic}
-              onDelete={this.handleDelete.bind(this, index)}
-              changeTitleButton={this.changeStateTitleHandler.bind(
-                this,
-                pic.name
-              )}
-              onChangeName={(event) =>
-                this.changeNameInput(event.target.value, index)
-              }
-            />
-          </ErrorBoundary>
+          // <ErrorBoundary key={index}>
+          <Picture
+            key={index} //when there is another root component (now ErrorBoundary) - the "key" go there
+            name={pic.name}
+            id_pic={pic.id_pic}
+            onDelete={this.handleDelete.bind(this, index)}
+            changeTitleButton={this.changeStateTitleHandler.bind(
+              this,
+              pic.name
+            )}
+            onChangeName={(event) =>
+              this.changeNameInput(event.target.value, index)
+            }
+          />
+          // </ErrorBoundary>
         );
       });
     }
@@ -96,9 +97,13 @@ class App extends Component {
           <h1>{this.props.title}</h1>
           <p style={{ color: "gray" }}>start at 11/22/2020</p>
 
-          <input type="text" onChange={this.changeInputHandler}></input>
+          <Counter />
 
-          <button className="buttonClick" onClick={this.changeTitleHandler}>
+          <input style={{ marginTop: 20 }} type="text" onChange={this.changeInputHandler}></input>
+
+          <button style={{
+            marginTop: 20
+          }} className="buttonClick" onClick={this.changeTitleHandler}>
             Change title
           </button>
 
