@@ -11,12 +11,23 @@ export default class Counter extends Component {
     }
 
     render() {
+        // standart variant performance
+        // return (
+        //     <div>
+        //         <h2>Counter {this.state.counter}</h2>
+        //         <button onClick={this.addCounter}>+</button>
+        //         <button onClick={() => this.setState({ counter: this.state.counter - 1 })}>-</button>
+        //     </div >
+        // )
+
+        // alternativ performance without root div. need identify with key for all array elements
         return (
-            <div>
-                <h2>Counter {this.state.counter}</h2>
-                <button onClick={this.addCounter}>+</button>
-                <button onClick={() => this.setState({ counter: this.state.counter - 1 })}>-</button>
-            </div >
+            [
+                <h2 key={'11'}>Counter {this.state.counter}</h2>,
+                <button key={'22'} onClick={this.addCounter}>+</button>,
+                <button key={'33'} onClick={() => this.setState({ counter: this.state.counter - 1 })}> -</button >
+
+            ]
         )
     }
 }
