@@ -6,9 +6,16 @@ export default class Counter extends Component {
     state = {
         counter: 0
     }
+// usual work of state:
+//     addCounter = () => {
+//         this.setState({counter: this.state.counter + 1})
+//     }
 
+    // most safe method of work with state - because its my be async
     addCounter = () => {
-        this.setState({counter: this.state.counter + 1})
+        this.setState((prevState) => {
+            return {counter: prevState.counter + 1};
+        })
     }
 
     render() {
