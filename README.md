@@ -15,10 +15,9 @@
 ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
 
-#### 01.12.2020
+#### 01-02.12.2020
 
 - fragments parts 1-2
-
 
 #### 30.11.2020
 
