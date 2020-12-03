@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "./Picture.css";
 // import Radium from "radium";
 import addRootClass from "../hoc/addRootClass";
+import PropTypes from 'prop-types';
 
 class Picture extends Component {
     // super({props})
@@ -98,5 +99,13 @@ class Picture extends Component {
 // using Radium
 // export default Radium(Picture);
 // export default Picture;
+
+Picture.propTypes = {
+    name: PropTypes.string.isRequired, // need value
+    id_pic: PropTypes.number,
+    onDelete: PropTypes.func,
+    onChangeName: PropTypes.func
+}
+
 export default addRootClass(Picture);
 

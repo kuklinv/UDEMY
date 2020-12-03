@@ -14,6 +14,9 @@
 
 ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
+#### 03.12.2020
+
+ - validation with PropTypes (yarn add to react-theory project)
 
 #### 01-02.12.2020
 

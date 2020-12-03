@@ -7,14 +7,15 @@ import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 // import SimpleComponent from "./SimpleESComponent/SimpleComponent.js"; // for using {child}
 import Counter from "./Counter/Counter.js";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       pics: [
         { name: "first pic", id_pic: 1 },
-        // { name: "second pic", id_pic: 2 },
-        // { name: "third pic", id_pic: 3 },
+        { name: "second pic", id_pic: 2 },
+        { name: "third pic", id_pic: 3 },
       ],
       pageTitle: "Hello UDEMY React course",
       showPicture: false,
