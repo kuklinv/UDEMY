@@ -16,8 +16,9 @@
 
 #### 03.12.2020
 
- - validation with PropTypes (yarn add to react-theory project)
- - references
+- validation with PropTypes (yarn add to react-theory project) 
+- references (use it only for specific tasks or fo focus on an element when its render)
+- Context API 
 
 #### 01-02.12.2020
 

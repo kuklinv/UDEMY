@@ -5,7 +5,7 @@ import Picture from "./PictureComponent/Picture.js";
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 // import _ from "lodash"; // TODO: for some reason debounce for input
 // import SimpleComponent from "./SimpleESComponent/SimpleComponent.js"; // for using {child}
-import Counter from "./Counter/Counter.js";
+import Counter from "./CounterComponent/Counter.js";
 
 
 class App extends Component {

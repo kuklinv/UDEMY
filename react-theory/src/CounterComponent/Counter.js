@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import Auxilliary from "../hoc/Aux";
+import CounterComponent2 from "./CounterComponent2/CounterComponent2";
+
 
 export default class Counter extends Component {
 
@@ -22,7 +24,7 @@ export default class Counter extends Component {
         // standard variant performance
         // return (
         //     <div>
-        //         <h2>Counter {this.state.counter}</h2>
+        //         <h2>CounterComponent {this.state.counter}</h2>
         //         <button onClick={this.addCounter}>+</button>
         //         <button onClick={() => this.setState({ counter: this.state.counter - 1 })}>-</button>
         //     </div >
@@ -31,7 +33,7 @@ export default class Counter extends Component {
         // alternative performance without root div. need identify with key for all array elements
         // return (
         //     [
-        //         <h2 key={'11'}>Counter {this.state.counter}</h2>,
+        //         <h2 key={'11'}>CounterComponent {this.state.counter}</h2>,
         //         <button key={'22'} onClick={this.addCounter}>+</button>,
         //         <button key={'33'} onClick={() => this.setState({ counter: this.state.counter - 1 })}> -</button >
         //
@@ -41,7 +43,7 @@ export default class Counter extends Component {
         // and fragment
         // return (
         //     <React.Fragment>
-        //         <h2>Counter {this.state.counter}</h2>
+        //         <h2>CounterComponent {this.state.counter}</h2>
         //         <button onClick={this.addCounter}>+</button>
         //         <button onClick={() => this.setState({counter: this.state.counter - 1})}>-</button>
         //     </React.Fragment>
@@ -51,6 +53,7 @@ export default class Counter extends Component {
         return (
             <Auxilliary>
                 <h2>Counter {this.state.counter}</h2>
+                <CounterComponent2 />
                 <button onClick={this.addCounter}>+</button>
                 <button onClick={() => this.setState({counter: this.state.counter - 1})}>-</button>
             </Auxilliary>
