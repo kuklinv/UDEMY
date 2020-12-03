@@ -74,6 +74,7 @@ class App extends Component {
             key={index} //when there is another root component (now ErrorBoundary) - the "key" go there
             name={pic.name}
             id_pic={pic.id_pic}
+            index = {index}
             onDelete={this.handleDelete.bind(this, index)}
             changeTitleButton={this.changeStateTitleHandler.bind(
               this,

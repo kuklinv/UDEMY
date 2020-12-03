@@ -6,7 +6,10 @@ import PropTypes from 'prop-types';
 
 class Picture extends Component {
     // super({props})
-
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
     // react life cycle component
     // shouldComponentUpdate(nextProps, nextState) {
     // optimization app  - test  - need change and re-render component or not
@@ -14,6 +17,12 @@ class Picture extends Component {
     // }
 
     // in Rect 16.3+ new life cycle methods (2)
+
+    componentDidMount() {
+        if (this.props.index === 0) {
+            this.inputRef.focus();
+        }
+    }
 
     static getDerivedStateFromProps(nextProps, prevState) {
         return prevState; // if don't change state, ore return result object - new state, witch will be merged with origin state
@@ -84,6 +93,7 @@ class Picture extends Component {
                     {this.props.children}
                     <input
                         type="text"
+                        ref={(inputRef) => this.inputRef = inputRef}
                         onChange={this.props.onChangeName}
                         value={this.props.name}
                         className={inputClasses.join(" ")}
@@ -103,6 +113,7 @@ class Picture extends Component {
 Picture.propTypes = {
     name: PropTypes.string.isRequired, // need value
     id_pic: PropTypes.number,
+    index: PropTypes.number,
     onDelete: PropTypes.func,
     onChangeName: PropTypes.func
 }

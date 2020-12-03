@@ -17,6 +17,7 @@
 #### 03.12.2020
 
  - validation with PropTypes (yarn add to react-theory project)
+ - references
 
 #### 01-02.12.2020
 
