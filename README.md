@@ -17,6 +17,8 @@
 
 #### 01-02.12.2020
 
+- hi order components (hoc)
+
 - fragments parts 1-2
 
 #### 30.11.2020
