@@ -52,10 +52,16 @@ export default class Counter extends Component {
         //and using hi order component (hoc) => aux
         return (
             <Auxilliary>
-                <h2>Counter {this.state.counter}</h2>
-                <CounterComponent2 />
-                <button onClick={this.addCounter}>+</button>
-                <button onClick={() => this.setState({counter: this.state.counter - 1})}>-</button>
+                <div style={{
+                    border: '5px solid #ccc',
+                    width: 300,
+                    margin: '0 auto'
+                }}>
+                    <h2>Counter {this.state.counter}</h2>
+                    <CounterComponent2/>
+                    <button onClick={this.addCounter}>+</button>
+                    <button onClick={() => this.setState({counter: this.state.counter - 1})}>-</button>
+                </div>
             </Auxilliary>
         )
     }

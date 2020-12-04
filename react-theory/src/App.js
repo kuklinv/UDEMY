@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import React, { Component } from "react";
 import "./App.css";
 import Picture from "./PictureComponent/Picture.js";
-import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
+// import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 // import _ from "lodash"; // TODO: for some reason debounce for input
 // import SimpleComponent from "./SimpleESComponent/SimpleComponent.js"; // for using {child}
 import Counter from "./CounterComponent/Counter.js";
@@ -19,6 +19,7 @@ class App extends Component {
       ],
       pageTitle: "Hello UDEMY React course",
       showPicture: false,
+      clicked: false
     };
   }
 
@@ -101,23 +102,30 @@ class App extends Component {
 
           <Counter />
 
-          <input style={{ marginTop: 20 }} type="text" onChange={this.changeInputHandler}></input>
+          {/*<input style={{ marginTop: 20 }} type="text" onChange={this.changeInputHandler}></input>*/}
+
+          {/*<button style={{*/}
+          {/*  marginTop: 20*/}
+          {/*}} className="buttonClick" onClick={this.changeTitleHandler}>*/}
+          {/*  Change title*/}
+          {/*</button>*/}
+
+          {/*<button*/}
+          {/*  className="buttonSetState"*/}
+          {/*  onClick={this.changeStateTitleHandler.bind(this, "Change state")}*/}
+          {/*>*/}
+          {/*  Change state*/}
+          {/*</button>*/}
 
           <button style={{
-            marginTop: 20
-          }} className="buttonClick" onClick={this.changeTitleHandler}>
-            Change title
-          </button>
-
-          <button
-            className="buttonSetState"
-            onClick={this.changeStateTitleHandler.bind(this, "Change state")}
-          >
-            Change state
-          </button>
+            marginTop: '10px'
+          }} onClick={() => {{this.setState({clicked: true})}}}>Change "clicked"</button>
 
           <button
             className="buttonTogglePics"
+            style={{
+              marginTop: '20px'
+            }}
             onClick={this.changeStateShowPicsHandler}
           >
             Toggle pics

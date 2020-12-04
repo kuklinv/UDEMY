@@ -9,6 +9,7 @@ class Picture extends Component {
     constructor(props) {
         super(props);
         this.state = {}
+
     }
     // react life cycle component
     // shouldComponentUpdate(nextProps, nextState) {
@@ -28,11 +29,11 @@ class Picture extends Component {
         return prevState; // if don't change state, ore return result object - new state, witch will be merged with origin state
     }
 
-    getSnapshotBeforeUpdate() {
-        console.log(
-            "for example for remembering cursor position before render and for rerender later"
-        );
-    }
+    // getSnapshotBeforeUpdate() {
+    //     console.log(
+    //         "for example for remembering cursor position before render and for rerender later"
+    //     );
+    // }
 
     render(props) {
         const inputClasses = ["input"];
