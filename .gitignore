@@ -4,6 +4,7 @@ node_modules
 .eslintcache
 /.pnp
 .pnp.js
+/config
 
 # testing
 /coverage
