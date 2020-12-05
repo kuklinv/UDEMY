@@ -8,11 +8,10 @@
   <img src="https://img.shields.io/badge/firebase%20-%23039BE5.svg?&style=for-the-badge&logo=firebase"/>
 </p>
 
-[![](https://img.shields.io/github/issues/kuklinv/UDEMY?logo=UDEMY)](http://shields.io/)
+[![](https://img.shields.io/github/issues/kuklinv/UDEMY?logo=UDEMY)](http://shields.io/)  ![](https://img.shields.io/github/repo-size/kuklinv/UDEMY)
 
-![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)
+![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)  ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
-![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
 #### 06.12.2020
 
