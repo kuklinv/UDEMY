@@ -14,6 +14,36 @@
 
 ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
+#### 06.12.2020
+
+- go to part 6 - Components.Practice project: create -> Components-Practice-Project
+
+#### 04-05.12.2020
+
+- finished with Context API
+
+#### 03.12.2020
+
+- validation with PropTypes (yarn add to react-theory project) 
+- references (use it only for specific tasks or fo focus on an element when its render)
+- Context API 
+
+#### 01-02.12.2020
+
+- hi order components (hoc)
+
+- fragments parts 1-2
+
+#### 30.11.2020
+
+- go to part 5: React Components: props, state, lifecycle methods, stateful component, ets about Components
+
+  > - shouldComponentUpdate(nextProps, nextState){...} for optimization
+  > - static getDerivedStateFromProps(nextProps, nextState){...} for mod state past render but before mount in DOM
+  > - getSnapshotBeforeUpdate() {...} for example for remembering cursor position before render and for rerender later
+
+- add ErrorBoundary dir for errors handling
+
 #### 25-29.11.2020
 
 - vol.3 about work with component state => done successfully
