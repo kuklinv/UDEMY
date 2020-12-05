@@ -14,10 +14,13 @@
 
 ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
-#### 04.12.2020
+#### 06.12.2020
 
-- finished with Context API 
 - go to part 6 - Components.Practice project: create -> Components-Practice-Project
+
+#### 04-05.12.2020
+
+- finished with Context API
 
 #### 03.12.2020
 

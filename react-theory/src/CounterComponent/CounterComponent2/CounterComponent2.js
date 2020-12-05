@@ -1,4 +1,5 @@
 import React from 'react';
+import {ClickedContext} from '/home/imroot/Documents/UDEMY/react-theory/src/App.js'
 
 export default props => {
     return (
@@ -8,7 +9,9 @@ export default props => {
             margin: '0 auto'
         }}>
             <h2>Couter 2</h2>
-            <p>Clicked</p>
+            <ClickedContext.Consumer>
+                {clicked => clicked ? <p>Clicked</p> : null}
+            </ClickedContext.Consumer>
         </div>
     )
 }
