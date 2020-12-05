@@ -16,7 +16,7 @@
 
 #### 06.12.2020
 
-- go to part 6 - Components.Practice project: create -> Components-Practice-Project
+- go to part 6 - Components.Practice project: create -> react-quiz
 
 #### 04-05.12.2020
 
