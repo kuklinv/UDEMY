@@ -12,10 +12,15 @@
 
 ![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)  ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
-
 #### 06.12.2020
 
-- go to part 6 - Components.Practice project: create -> react-quiz
+go to part 6 - Components.Practice project: create -> react-quiz
+
+***Structure of project:***
+> - Layout - root ho order Component for all site content and styles, when css as module with \Layout.module.css\ and 'classes'
+> - containers - folder with stateFull components
+> - components - functional components
+> 
 
 #### 04-05.12.2020
 
@@ -23,9 +28,9 @@
 
 #### 03.12.2020
 
-- validation with PropTypes (yarn add to react-theory project) 
+- validation with PropTypes (yarn add to react-theory project)
 - references (use it only for specific tasks or fo focus on an element when its render)
-- Context API 
+- Context API
 
 #### 01-02.12.2020
 
