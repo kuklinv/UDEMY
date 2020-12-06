@@ -1,0 +1,11 @@
+.Layout {
+    height: 100vh; /*all height of screen*/
+    display: flex;
+    flex-direction: column; /*all elements in column*/
+}
+
+.Layout main { /*наследник до main*/
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /*tag 'main' use all its height*/
+}
