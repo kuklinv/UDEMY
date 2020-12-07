@@ -12,6 +12,12 @@
 
 ![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)  ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
+#### 07.12.2020
+
+***react-quiz*** continue
+- add functional quiz-list component
+
+
 #### 06.12.2020
 
 go to part 6 - Components.Practice project: create -> react-quiz
@@ -20,7 +26,6 @@ go to part 6 - Components.Practice project: create -> react-quiz
 > - Layout - root ho order Component for all site content and styles, when css as module with \Layout.module.css\ and 'classes'
 > - containers - folder with stateFull components
 > - components - functional components
-> 
 
 #### 04-05.12.2020
 
