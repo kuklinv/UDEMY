@@ -31,15 +31,42 @@ class Quiz extends Component {
         ]
     };
 
-    selectQuizAnswerHandler = (answerId) =>{
-        console.log('you select:', answerId);
-    }
-
     chengToNextQuestion = () => {
         this.setState({
             activQuestion: this.state.activQuestion + 1
         })
     }
+
+    quizFinished = () => {
+        return this.state.activQuestion + 1 === this.state.quiz.length;
+    }
+
+    selectQuizAnswerHandler = (answerId) => {
+        console.log('you select:', answerId);
+
+        const qwestion = this.state.quiz[this.state.activQuestion];
+
+        if (qwestion.wrightAnswerId === answerId) {
+
+            const timeOut = window.setTimeout(() => {
+
+                if (this.quizFinished()) {
+                    console.log('quize finished');
+                } else {
+                    console.log('you right, next question');
+                    this.chengToNextQuestion();
+                }
+
+                window.clearTimeout(timeOut);
+            }, 1000)
+
+
+        } else {
+            console.log('you wrong, think about it....')
+        }
+
+    }
+
 
     render() {
         return (
