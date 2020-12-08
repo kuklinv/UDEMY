@@ -33,7 +33,7 @@ class Quiz extends Component {
                         question={this.state.quiz[0].question}
                         answers={this.state.quiz[0].answers}
                         numberOfQuiz={this.state.quiz.length}
-                        selectQuizAnswer={this.selectQuizAnswerHandler()}
+                        selectQuizAnswer={this.selectQuizAnswerHandler}
                     />
                 </div>
             </div>
