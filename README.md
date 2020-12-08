@@ -12,6 +12,11 @@
 
 ![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)  ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
+#### 08.12.2020
+
+***react-quiz*** continue
+- add events (click)
+
 #### 07.12.2020
 
 ***react-quiz*** continue

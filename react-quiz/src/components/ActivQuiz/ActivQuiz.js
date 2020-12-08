@@ -6,12 +6,15 @@ const ActivQuiz = props => (
     <div className={classes.ActivQuis}>
         <p className={classes.Question}>
             <span>
-                <strong>1.</strong>&nbsp;
-                How are you doing?
+                <strong>{props.questionId}</strong>&nbsp;
+                {props.question}
            </span>
-            <small>4 of 12</small>
+            <small>{props.questionId} of {props.numberOfQuiz}</small>
         </p>
-        <AnswersList answers={props.answers}/>
+        <AnswersList
+            answers={props.answers}
+            selectQuizAnswer={props.selectQuizAnswer}
+        />
     </div>
 );
 
