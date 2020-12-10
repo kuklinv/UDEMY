@@ -10,6 +10,7 @@ const AnswersList = props => (
                     key={index}
                     answer={answer}
                     selectQuizAnswer={props.selectQuizAnswer}
+                    answerState={props.answerState ? props.state[answer.id] : null}
                 />
             )
         })}
