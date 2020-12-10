@@ -34,7 +34,8 @@ class Quiz extends Component {
 
     chengToNextQuestion = () => {
         this.setState({
-            activQuestion: this.state.activQuestion + 1
+            activQuestion: this.state.activQuestion + 1,
+            answerState: null
         })
     }
 
@@ -67,7 +68,8 @@ class Quiz extends Component {
 
         } else {
             // this.state.answerState = {[answerId]: 'error'}
-            this.setState({answerState: {[answerId]: 'error'}})
+            this.setState({answerState: {[answerId]: 'error'}}
+                )
             console.log('you wrong, think about it....')
         }
 
