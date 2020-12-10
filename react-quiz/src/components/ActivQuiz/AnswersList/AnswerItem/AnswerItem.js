@@ -3,14 +3,14 @@ import classes from './AnswerItem.module.css';
 
 const AnswerItem = props => {
 
-    const answerStateColor = ['forSuccess', 'forError'];
+    const answerStateColor = [classes.AnswerItem];
 
     if (props.answerState) {
-        props.answerState === 'success' ?
+        answerStateColor.push(classes[props.answerState])
     }
 
     return (
-        <li className={classes.AnswerItem}
+        <li className={answerStateColor.join(' ')}
             onClick={() => props.selectQuizAnswer(props.answer.id)}
         >
             {props.answer.text}

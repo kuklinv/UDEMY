@@ -49,7 +49,8 @@ class Quiz extends Component {
 
         if (qwestion.wrightAnswerId === answerId) {
 
-            this.state.answerState = {[answerId]: 'success'}
+            // this.state.answerState = {[answerId]: 'success'}
+            this.setState({answerState: {[answerId]: 'success'}})
 
             const timeOut = window.setTimeout(() => {
 
@@ -65,7 +66,8 @@ class Quiz extends Component {
 
 
         } else {
-            this.state.answerState = {[answerId]: 'error'}
+            // this.state.answerState = {[answerId]: 'error'}
+            this.setState({answerState: {[answerId]: 'error'}})
             console.log('you wrong, think about it....')
         }
 

@@ -10,7 +10,7 @@ const AnswersList = props => (
                     key={index}
                     answer={answer}
                     selectQuizAnswer={props.selectQuizAnswer}
-                    answerState={props.answerState ? props.state[answer.id] : null}
+                    answerState={props.answerState ? props.answerState[answer.id] : null}
                 />
             )
         })}
