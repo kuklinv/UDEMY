@@ -14,6 +14,7 @@ const ActivQuiz = props => (
         <AnswersList
             answers={props.answers}
             selectQuizAnswer={props.selectQuizAnswer}
+            answerState={props.answerState}
         />
     </div>
 );
