@@ -4,6 +4,7 @@ import ActivQuiz from "../../components/ActivQuiz/ActivQuiz";
 
 class Quiz extends Component {
     state = {
+        quizFinished: false,
         activQuestion: 0,
         answerState: null,
         quiz: [
@@ -46,9 +47,9 @@ class Quiz extends Component {
     selectQuizAnswerHandler = (answerId) => {
 
         // wait change quiz when we have a right answer, for not finished quiz with double click wright button
-        if(this.state.answerState){
-            const  key = Object.keys(this.state.answerState)[0];
-            if(this.state.answerState[key] === 'success'){
+        if (this.state.answerState) {
+            const key = Object.keys(this.state.answerState)[0];
+            if (this.state.answerState[key] === 'success') {
                 return;
             }
         }
@@ -65,7 +66,7 @@ class Quiz extends Component {
             const timeOut = window.setTimeout(() => {
 
                 if (this.quizFinished()) {
-                    console.log('quize finished');
+                    this.setState({quizFinished: true});
                 } else {
                     console.log('you right, next question');
                     this.chengToNextQuestion();
@@ -90,14 +91,20 @@ class Quiz extends Component {
             <div className={classes.Quiz}>
                 <div className={classes.QuizWrapper}>
                     <h2>Answer all questions</h2>
-                    <ActivQuiz
-                        questionId={this.state.quiz[this.state.activQuestion].questionId}
-                        question={this.state.quiz[this.state.activQuestion].question}
-                        answers={this.state.quiz[this.state.activQuestion].answers}
-                        numberOfQuiz={this.state.quiz.length}
-                        selectQuizAnswer={this.selectQuizAnswerHandler}
-                        answerState={this.state.answerState}
-                    />
+
+                    {
+                        this.state.quizFinished === true ?
+                            <h2>Quiz FINISHED</h2> :
+                            <ActivQuiz
+                                questionId={this.state.quiz[this.state.activQuestion].questionId}
+                                question={this.state.quiz[this.state.activQuestion].question}
+                                answers={this.state.quiz[this.state.activQuestion].answers}
+                                numberOfQuiz={this.state.quiz.length}
+                                selectQuizAnswer={this.selectQuizAnswerHandler}
+                                answerState={this.state.answerState}
+                            />
+                    }
+
                 </div>
             </div>
         )
