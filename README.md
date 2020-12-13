@@ -12,6 +12,13 @@
 
 ![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)  ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
+#### 09-13.12.2020
+
+***react-quiz*** continue
+- add answers and question hendlers and checks
+- add styling for wright and wrong answers
+- add finished component
+
 #### 08.12.2020
 
 ***react-quiz*** continue

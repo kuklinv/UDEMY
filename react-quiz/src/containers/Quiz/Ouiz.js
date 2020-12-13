@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import classes from './Quiz.module.css';
 import ActivQuiz from "../../components/ActivQuiz/ActivQuiz";
+import FinishedQuiz from "../../components/FinishedQuiz/FinishedQuiz";
 
 class Quiz extends Component {
     state = {
@@ -94,7 +95,7 @@ class Quiz extends Component {
 
                     {
                         this.state.quizFinished === true ?
-                            <h2>Quiz FINISHED</h2> :
+                            <FinishedQuiz/> :
                             <ActivQuiz
                                 questionId={this.state.quiz[this.state.activQuestion].questionId}
                                 question={this.state.quiz[this.state.activQuestion].question}
