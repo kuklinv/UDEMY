@@ -44,6 +44,15 @@ class Quiz extends Component {
     }
 
     selectQuizAnswerHandler = (answerId) => {
+
+        // wait change quiz when we have a right answer, for not finished quiz with double click wright button
+        if(this.state.answerState){
+            const  key = Object.keys(this.state.answerState)[0];
+            if(this.state.answerState[key] === 'success'){
+                return;
+            }
+        }
+
         console.log('you select:', answerId);
 
         const qwestion = this.state.quiz[this.state.activQuestion];
@@ -69,7 +78,7 @@ class Quiz extends Component {
         } else {
             // this.state.answerState = {[answerId]: 'error'}
             this.setState({answerState: {[answerId]: 'error'}}
-                )
+            )
             console.log('you wrong, think about it....')
         }
 
