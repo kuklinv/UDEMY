@@ -5,6 +5,7 @@ import FinishedQuiz from "../../components/FinishedQuiz/FinishedQuiz";
 
 class Quiz extends Component {
     state = {
+        rezults: {}, // {[key]: success || error}
         quizFinished: false,
         activQuestion: 0,
         answerState: null,
@@ -59,10 +60,19 @@ class Quiz extends Component {
 
         const qwestion = this.state.quiz[this.state.activQuestion];
 
+        const results = this.state.rezults;
+
         if (qwestion.wrightAnswerId === answerId) {
 
+            if (!results[answerId]) {
+                results[answerId] = 'success';
+            }
+
             // this.state.answerState = {[answerId]: 'success'}
-            this.setState({answerState: {[answerId]: 'success'}})
+            this.setState({
+                answerState: {[answerId]: 'success'},
+                results: results
+            });
 
             const timeOut = window.setTimeout(() => {
 
@@ -79,9 +89,11 @@ class Quiz extends Component {
 
         } else {
             // this.state.answerState = {[answerId]: 'error'}
-            this.setState({answerState: {[answerId]: 'error'}}
+            results[answerId] = 'error';
+            this.setState({answerState: {[answerId]: 'error'}, results: results}
             )
             console.log('you wrong, think about it....')
+
         }
 
     }
@@ -95,7 +107,10 @@ class Quiz extends Component {
 
                     {
                         this.state.quizFinished === true ?
-                            <FinishedQuiz/> :
+                            <FinishedQuiz
+                                results={this.state.rezults}
+                                quiz={this.state.quiz}
+                            /> :
                             <ActivQuiz
                                 questionId={this.state.quiz[this.state.activQuestion].questionId}
                                 question={this.state.quiz[this.state.activQuestion].question}
