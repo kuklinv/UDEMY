@@ -12,6 +12,11 @@
 
 ![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)  ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
+#### 14-15.12.2020
+
+***react-quiz*** continue
+- define results state in root quize component and put it to finished component
+
 #### 09-13.12.2020
 
 ***react-quiz*** continue
