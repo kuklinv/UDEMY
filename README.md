@@ -12,6 +12,11 @@
 
 ![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)  ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
+#### 16.12.2020
+
+***react-quiz*** continue
+- rebase from linux to mac// update dependencies
+
 #### 14-15.12.2020
 
 ***react-quiz*** continue
