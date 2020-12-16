@@ -49,6 +49,7 @@ class Quiz extends Component {
   };
 
   selectQuizAnswerHandler = (answerId) => {
+    //TODO: not right working! when i have a wrong answer i need to fix wrong and go next quiz!
     // wait change quiz when we have a right answer, for not finished quiz with double click wright button
     if (this.state.answerState) {
       const key = Object.keys(this.state.answerState)[0];
