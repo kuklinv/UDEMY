@@ -10,7 +10,7 @@ const FinishedQuiz = (props) => {
           const cls = [
             "fa",
             props.results[quizItem.id] === "error" ? "fa-times" : "fa-check",
-            classes[props.results[quizItem.id]],
+            classes[props.results[quizItem.id]], // TODO: not render this
           ];
           return (
             <li key={index}>
@@ -20,14 +20,6 @@ const FinishedQuiz = (props) => {
             </li>
           );
         })}
-        {/* <li>
-          <strong>1. </strong> Qwestion.....
-          <i className={"fa fa-times" + " " + classes.error} />
-        </li>
-        <li>
-          <strong>2. </strong> Qwestion.....
-          <i className={"fa fa-check" + " " + classes.success} />
-        </li> */}
       </ul>
       <p> You wright in 4 of {props.quiz.length}</p>
       <div>
