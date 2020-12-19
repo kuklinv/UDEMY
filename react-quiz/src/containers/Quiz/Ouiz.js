@@ -134,6 +134,17 @@ class Quiz extends Component {
     }
   };
 
+  RetryQuiz = () => {
+    this.setState({
+      results: {}, // {[key]: success || error}
+      quizFinished: false,
+      activQuestion: 0,
+      answerState: null,
+      activeHeader: "Welcome to Quiz app",
+      startFinishedHeader: "Answer all questions",
+    });
+  };
+
   render() {
     return (
       <div className={classes.Quiz}>
@@ -142,7 +153,11 @@ class Quiz extends Component {
           <h2>{this.state.startFinishedHeader}</h2>
 
           {this.state.quizFinished === true ? (
-            <FinishedQuiz results={this.state.results} quiz={this.state.quiz} />
+            <FinishedQuiz
+              results={this.state.results}
+              quiz={this.state.quiz}
+              RetryQuiz={this.retryQuiz}
+            />
           ) : (
             <ActivQuiz
               questionId={this.state.quiz[this.state.activQuestion].questionId}

@@ -18,7 +18,6 @@ const FinishedQuiz = (props) => {
             props.results[quizItem.id] === "error" ? "fa-times" : "fa-check",
             classes[props.results[quizItem.id]], // TODO: not render this
           ];
-          debugger;
 
           return (
             <li key={index}>
@@ -34,7 +33,7 @@ const FinishedQuiz = (props) => {
         You wright in {successCount} of {props.quiz.length}
       </p>
       <div>
-        <button>Repeat</button>
+        <button onClick={props.RetryQuiz}>Repeat</button>
       </div>
     </div>
   );
