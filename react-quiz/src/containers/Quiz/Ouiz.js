@@ -66,7 +66,7 @@ class Quiz extends Component {
 
     if (qwestion.wrightAnswerId === answerId) {
       if (!results[answerId]) {
-        results[answerId] = "success";
+        results[answerId] = "success"; // TODO: ? for what?
       }
 
       // this.state.answerState = {[answerId]: 'success'}
@@ -74,8 +74,10 @@ class Quiz extends Component {
         answerState: { [answerId]: "success" },
         results: results,
       });
+      console.log("you wright");
 
       const timeOut = window.setTimeout(() => {
+        // TODO: move to another function
         if (this.quizFinished()) {
           this.setState({
             quizFinished: true,
@@ -83,7 +85,7 @@ class Quiz extends Component {
             startFinishedHeader: "You answered all question's",
           });
         } else {
-          console.log("you right, next question");
+          console.log("next question");
           this.chengToNextQuestion();
         }
 
@@ -94,6 +96,21 @@ class Quiz extends Component {
       results[answerId] = "error";
       this.setState({ answerState: { [answerId]: "error" }, results: results });
       console.log("you wrong, think about it....");
+
+      const timeOut = window.setTimeout(() => {
+        if (this.quizFinished()) {
+          this.setState({
+            quizFinished: true,
+            activeHeader: "Eazy-peazy",
+            startFinishedHeader: "You answered all question's",
+          });
+        } else {
+          console.log("next question");
+          this.chengToNextQuestion();
+        }
+
+        window.clearTimeout(timeOut);
+      }, 1000);
     }
   };
 
