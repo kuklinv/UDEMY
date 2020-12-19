@@ -5,7 +5,7 @@ import FinishedQuiz from "../../components/FinishedQuiz/FinishedQuiz";
 
 class Quiz extends Component {
   state = {
-    rezults: {}, // {[key]: success || error}
+    results: {}, // {[key]: success || error}
     quizFinished: false,
     activQuestion: 0,
     answerState: null,
@@ -49,7 +49,6 @@ class Quiz extends Component {
   };
 
   selectQuizAnswerHandler = (answerId) => {
-    //TODO: not right working! when i have a wrong answer i need to fix wrong and go next quiz!
     // wait change quiz when we have a right answer, for not finished quiz with double click wright button
     if (this.state.answerState) {
       const key = Object.keys(this.state.answerState)[0];
@@ -58,15 +57,35 @@ class Quiz extends Component {
       }
     }
 
+    //refactoring SetTimeOut
+    // const refactorSetTimeout = function() {
+    //   const timeOut = window.setTimeout(() => {
+    //     // TODO: move to another function
+    //     if (this.call.quizFinished()) {
+    //       this.setState({
+    //         quizFinished: true,
+    //         activeHeader: "Eazy-peazy",
+    //         startFinishedHeader: "You answered all question's",
+    //       });
+    //     } else {
+    //       console.log("next question");
+    //       this.chengToNextQuestion();
+    //     }
+
+    //     window.clearTimeout(timeOut);
+    //   }, 1000);
+    // };
+    ///
+
     console.log("you select:", answerId);
 
     const qwestion = this.state.quiz[this.state.activQuestion];
 
-    const results = this.state.rezults;
+    const results = this.state.results;
 
     if (qwestion.wrightAnswerId === answerId) {
-      if (!results[answerId]) {
-        results[answerId] = "success"; // TODO: ? for what?
+      if (!results[qwestion.id]) {
+        results[qwestion.id] = "success"; // TODO: ? for what?
       }
 
       // this.state.answerState = {[answerId]: 'success'}
@@ -76,6 +95,7 @@ class Quiz extends Component {
       });
       console.log("you wright");
 
+      // refactorSetTimeout();
       const timeOut = window.setTimeout(() => {
         // TODO: move to another function
         if (this.quizFinished()) {
@@ -93,7 +113,7 @@ class Quiz extends Component {
       }, 1000);
     } else {
       // this.state.answerState = {[answerId]: 'error'}
-      results[answerId] = "error";
+      results[qwestion.id] = "error";
       this.setState({ answerState: { [answerId]: "error" }, results: results });
       console.log("you wrong, think about it....");
 
@@ -122,7 +142,7 @@ class Quiz extends Component {
           <h2>{this.state.startFinishedHeader}</h2>
 
           {this.state.quizFinished === true ? (
-            <FinishedQuiz results={this.state.rezults} quiz={this.state.quiz} />
+            <FinishedQuiz results={this.state.results} quiz={this.state.quiz} />
           ) : (
             <ActivQuiz
               questionId={this.state.quiz[this.state.activQuestion].questionId}

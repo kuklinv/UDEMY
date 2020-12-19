@@ -2,6 +2,12 @@ import React from "react";
 import classes from "./FinishedQuiz.module.css";
 
 const FinishedQuiz = (props) => {
+  const successCount = Object.keys(props.results).reduce((total, key) => {
+    if (props.results[key] === "success") {
+      total++;
+    }
+    return total;
+  }, 0);
   return (
     <div className={classes.Finished}>
       <h4>Results:</h4>
@@ -12,6 +18,8 @@ const FinishedQuiz = (props) => {
             props.results[quizItem.id] === "error" ? "fa-times" : "fa-check",
             classes[props.results[quizItem.id]], // TODO: not render this
           ];
+          debugger;
+
           return (
             <li key={index}>
               <strong>{index + 1}</strong>. &nbsp;
@@ -21,7 +29,10 @@ const FinishedQuiz = (props) => {
           );
         })}
       </ul>
-      <p> You wright in 4 of {props.quiz.length}</p>
+      <p>
+        {" "}
+        You wright in {successCount} of {props.quiz.length}
+      </p>
       <div>
         <button>Repeat</button>
       </div>
