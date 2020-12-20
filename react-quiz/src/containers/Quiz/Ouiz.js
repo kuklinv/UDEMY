@@ -64,16 +64,16 @@ class Quiz extends Component {
     const results = this.state.results;
 
     if (qwestion.wrightAnswerId === answerId) {
-      // if (!results[qwestion.id]) {
-      //   results[qwestion.id] = "success"; // TODO: ? for what?
-      // }
-
+      if (!results[qwestion.questionId]) {
+        results[qwestion.questionId] = "success"; // TODO: ? for what?
+      }
+      console.log(results[qwestion.id]);
       // this.state.answerState = {[answerId]: 'success'}
       this.setState({
         answerState: { [answerId]: "success" },
-        results: results,
+        results,
       });
-      console.log("you wright");
+      console.log("you wright", results);
 
       // refactorSetTimeout();
       const timeOut = window.setTimeout(() => {
@@ -93,9 +93,10 @@ class Quiz extends Component {
       }, 1000);
     } else {
       // this.state.answerState = {[answerId]: 'error'}
-      results[qwestion.id] = "error";
-      this.setState({ answerState: { [answerId]: "error" }, results: results });
-      console.log("you wrong, think about it....");
+      results[qwestion.questionId] = "error";
+      console.log(results[qwestion.questionId]);
+      this.setState({ answerState: { [answerId]: "error" }, results });
+      console.log("you wrong", results);
 
       const timeOut = window.setTimeout(() => {
         if (this.quizFinishedFunction()) {
@@ -136,7 +137,7 @@ class Quiz extends Component {
             <FinishedQuiz
               results={this.state.results}
               quiz={this.state.quiz}
-              RetryQuiz={this.retryQuiz}
+              RetryQuiz={this.RetryQuiz}
             />
           ) : (
             <ActivQuiz

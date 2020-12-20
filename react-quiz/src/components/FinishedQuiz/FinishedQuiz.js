@@ -15,8 +15,10 @@ const FinishedQuiz = (props) => {
         {props.quiz.map((quizItem, index) => {
           const cls = [
             "fa",
-            props.results[quizItem.id] === "error" ? "fa-times" : "fa-check",
-            classes[props.results[quizItem.id]], // TODO: not render this
+            props.results[quizItem.questionId] === "error"
+              ? "fa-times"
+              : "fa-check",
+            classes[props.results[quizItem.questionId]], // TODO: not render this
           ];
 
           return (
