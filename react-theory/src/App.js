@@ -124,6 +124,7 @@ class App extends Component {
                     <button style={{
                         marginTop: '10px'
                     }} onClick={() => {
+                        // eslint-disable-next-line no-lone-blocks
                         {
                             this.setState({clicked: true})
                         }

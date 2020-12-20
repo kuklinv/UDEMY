@@ -12,6 +12,23 @@
 
 ![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)  ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
+#### 16.12.2020
+
+***react-quiz*** continue
+- rebase from linux to mac// update dependencies
+
+#### 14-15.12.2020
+
+***react-quiz*** continue
+- define results state in root quize component and put it to finished component
+
+#### 09-13.12.2020
+
+***react-quiz*** continue
+- add answers and question hendlers and checks
+- add styling for wright and wrong answers
+- add finished component
+
 #### 08.12.2020
 
 ***react-quiz*** continue
