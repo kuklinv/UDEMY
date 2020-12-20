@@ -44,7 +44,7 @@ class Quiz extends Component {
     });
   };
 
-  quizFinished = () => {
+  quizFinishedFunction = () => {
     return this.state.activQuestion + 1 === this.state.quiz.length;
   };
 
@@ -57,26 +57,6 @@ class Quiz extends Component {
       }
     }
 
-    //refactoring SetTimeOut
-    // const refactorSetTimeout = function() {
-    //   const timeOut = window.setTimeout(() => {
-    //     // TODO: move to another function
-    //     if (this.call.quizFinished()) {
-    //       this.setState({
-    //         quizFinished: true,
-    //         activeHeader: "Eazy-peazy",
-    //         startFinishedHeader: "You answered all question's",
-    //       });
-    //     } else {
-    //       console.log("next question");
-    //       this.chengToNextQuestion();
-    //     }
-
-    //     window.clearTimeout(timeOut);
-    //   }, 1000);
-    // };
-    ///
-
     console.log("you select:", answerId);
 
     const qwestion = this.state.quiz[this.state.activQuestion];
@@ -84,9 +64,9 @@ class Quiz extends Component {
     const results = this.state.results;
 
     if (qwestion.wrightAnswerId === answerId) {
-      if (!results[qwestion.id]) {
-        results[qwestion.id] = "success"; // TODO: ? for what?
-      }
+      // if (!results[qwestion.id]) {
+      //   results[qwestion.id] = "success"; // TODO: ? for what?
+      // }
 
       // this.state.answerState = {[answerId]: 'success'}
       this.setState({
@@ -98,7 +78,7 @@ class Quiz extends Component {
       // refactorSetTimeout();
       const timeOut = window.setTimeout(() => {
         // TODO: move to another function
-        if (this.quizFinished()) {
+        if (this.quizFinishedFunction()) {
           this.setState({
             quizFinished: true,
             activeHeader: "Eazy-peazy",
@@ -118,7 +98,7 @@ class Quiz extends Component {
       console.log("you wrong, think about it....");
 
       const timeOut = window.setTimeout(() => {
-        if (this.quizFinished()) {
+        if (this.quizFinishedFunction()) {
           this.setState({
             quizFinished: true,
             activeHeader: "Eazy-peazy",
