@@ -8,43 +8,55 @@
   <img src="https://img.shields.io/badge/firebase%20-%23039BE5.svg?&style=for-the-badge&logo=firebase"/>
 </p>
 
-[![](https://img.shields.io/github/issues/kuklinv/UDEMY?logo=UDEMY)](http://shields.io/)  ![](https://img.shields.io/github/repo-size/kuklinv/UDEMY)
+[![](https://img.shields.io/github/issues/kuklinv/UDEMY?logo=UDEMY)](http://shields.io/) ![](https://img.shields.io/github/repo-size/kuklinv/UDEMY)
 
-![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github)  ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
+![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github) ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
+
+#### 17-21.12.2020
+
+**_react-quiz_** continue
+
+- work with finished component.... a lot of bugfixes.... its done
+- now go to next 6.55 - button.component
 
 #### 16.12.2020
 
-***react-quiz*** continue
+**_react-quiz_** continue
+
 - rebase from linux to mac// update dependencies
 
 #### 14-15.12.2020
 
-***react-quiz*** continue
+**_react-quiz_** continue
+
 - define results state in root quize component and put it to finished component
 
 #### 09-13.12.2020
 
-***react-quiz*** continue
+**_react-quiz_** continue
+
 - add answers and question hendlers and checks
 - add styling for wright and wrong answers
 - add finished component
 
 #### 08.12.2020
 
-***react-quiz*** continue
+**_react-quiz_** continue
+
 - add events (click)
 
 #### 07.12.2020
 
-***react-quiz*** continue
-- add functional quiz-list component
+**_react-quiz_** continue
 
+- add functional quiz-list component
 
 #### 06.12.2020
 
 go to part 6 - Components.Practice project: create -> react-quiz
 
-***Structure of project:***
+**_Structure of project:_**
+
 > - Layout - root ho order Component for all site content and styles, when css as module with \Layout.module.css\ and 'classes'
 > - containers - folder with stateFull components
 > - components - functional components

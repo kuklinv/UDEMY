@@ -18,7 +18,7 @@ const FinishedQuiz = (props) => {
             props.results[quizItem.questionId] === "error"
               ? "fa-times"
               : "fa-check",
-            classes[props.results[quizItem.questionId]], // TODO: not render this
+            classes[props.results[quizItem.questionId]], //
           ];
 
           return (

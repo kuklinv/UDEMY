@@ -65,7 +65,7 @@ class Quiz extends Component {
 
     if (qwestion.wrightAnswerId === answerId) {
       if (!results[qwestion.questionId]) {
-        results[qwestion.questionId] = "success"; // TODO: ? for what?
+        results[qwestion.questionId] = "success"; //
       }
       console.log(results[qwestion.id]);
       // this.state.answerState = {[answerId]: 'success'}
