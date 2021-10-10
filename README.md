@@ -12,6 +12,11 @@
 
 ![](https://img.shields.io/github/last-commit/kuklinv/UDEMY?logo=github) ![](https://img.shields.io/github/commit-activity/y/kuklinv/UDEMY?logo=github)
 
+#### 10.10.2021
+
+**try to continue**
+find this repo in UDEMY.github this READ.me in root folder
+
 #### 17-21.12.2020
 
 **_react-quiz_** continue
