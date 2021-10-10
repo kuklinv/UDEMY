@@ -15,6 +15,7 @@
 #### 10.10.2021
 
 **try to continue**
+find this repo in UDEMY.github this READ.me in root folder
 
 #### 17-21.12.2020
 
